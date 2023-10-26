@@ -17,6 +17,7 @@ alert(`Actualmente trabajamos con la siguiente linea de productos:
     1) Ropa de hombres
     2) Electrónica`)
 
+
 //mediante un map extraemos los titulos del array.
 
 let productos = filtrador(products, category1, category2)
@@ -35,19 +36,19 @@ function ordenarArray(array) {
         if (i < array.length - 1) {
             producto += "\n";
         }
-    }
-
-    return producto;
+    }   return producto;
 }
 
 let listaProductos = ordenarArray(titles);
 
+// Preguntamos al ususario mediante un prompt el numero del producto que desea adquirir.
 
 let productoUsuario = parseInt(prompt(`Seleccione el número del producto que desee adquirir:
-  ${listaProductos}`));
+${listaProductos}`));
+
 
   if (isNaN(productoUsuario)) {
-    alert("Gracias por su visita!");
+    alert("Muchas Gracias por la visita!");
 } else {
     while (productoUsuario < 1 || productoUsuario > 10) {
         productoUsuario = prompt(`Ingrese el número de los productos disponibles:
